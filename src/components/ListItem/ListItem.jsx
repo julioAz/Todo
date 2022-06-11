@@ -5,22 +5,26 @@ function ListItem(props){
 
     function DoneImg(props){
         if(props.done){
-            return <span>Feito</span>
+            return <img 
+            src="../../../assets/doneIcon.png"
+            alt="excluir" />
         } else {
-            return <span>Não feito</span>
+            return <img 
+            src="../../../assets/undoneIcon.png"
+            alt="excluir" />
         }
     }
 
     return( 
-        <li >
+        <li className="listItem" >
             <Card className={props.item.done?"done":""}>
                 {props.item.text}
                 <div>
-                    <button 
+                    <button className="doneButton"
                         onClick={()=> { props.onDone(props.item )}}>
                         <DoneImg done={ props.item.done }></DoneImg>
                     </button>
-                    <button 
+                    <button className="deleteItem"
                         onClick={()=>{ props.onItemDeleted(props.item) }}>
                         <img 
                         src="../../../assets/trashCan.png"

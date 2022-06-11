@@ -5,16 +5,14 @@ function Modal(props){
 
     function hideModal(e){
         let target = e.target;
-        if(target.id === Modal){
+        if(target.id === 'modal'){
             props.onHideModal();
         }
     }
 
     return(
         <div id="modal" onClick={hideModal} className={props.show?"modal": "modal hide"}>
-            <Card>
-                {props.children}
-            </Card>
+            {props.children}
         </div>
     )
 }

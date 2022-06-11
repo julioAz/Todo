@@ -1,10 +1,149 @@
-.container {
-    padding: 10px;
-    margin: 0 auto;
-    max-width: 900px;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
-img {
-    width: 25px;
-    height: 20px;
+:root {
+    --color-primary: #0081A7;
+    --color-secondary: #00AFB9;
+    --color-light: #FDFCDC;
+    --color-info: #FED9B7;
+    --color-muted: #F07167;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-light);
+    margin: 0 auto;
+    padding: 16px;
+    max-width: 1920px;
+    background-color: var(--color-secondary);
+    box-shadow: #0081A7 0px 0px 20px;
+}
+
+.header h1 {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+.header button {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.header button:hover {
+    box-shadow: #FED9B7 0px 0px 20px;
+}
+
+.listItem {
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+}
+
+.deleteItem ,
+.doneButton  {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.deleteItem img,
+.doneButton img {
+    width: 30px;
+    height: 30px;
+}
+
+.card {
+    width: calc(100% - 30px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 8px 15px;
+    margin: 16px;
+    box-shadow: #0081A7 0px 0px 20px;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+
+.modal {
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: .6;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hide {
+    display: none;
+}
+
+.formControl {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 320px;
+    border-radius: 4px;
+    padding: 16px;
+    margin: 16px;
+    box-shadow: #0081A7 0px 0px 20px;
+    background-color: #fff;
+    gap: 16px;
+}
+
+.formControl label {
+    font-weight: 700;
+    color: var(--color-primary);
+    text-transform: uppercase;
+}
+
+.formControl input {
+    width: 100%;
+    max-width: 320px;
+    border-color: #242424;
+    padding: 8px;
+    border: 1px solid var(--color-secondary);
+    border-radius: 16px;
+    width: calc(100% - 32px);
+}
+
+.formControl .addItem{
+    background-color: transparent;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }

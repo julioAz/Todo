@@ -48,15 +48,14 @@ function Todo(){
     }
 
     return (
-        <div className="container">
-            <header>
-                <h1>Todo</h1>
+        <>
+            <header className="header">
+                <h1>Todo List</h1>
                 <button onClick={() => { setShowModal(true) }} className="add">+</button>
             </header>
-            {/* <TodoForm onAddItem={onAddItem}></TodoForm> */}
             <List onDone={onDone} onItemDeleted={onItemDeleted} items={items} />
             <Modal show={showModal} onHideModal={onHideModal}><TodoForm onAddItem={onAddItem}></TodoForm></Modal>
-        </div>
+        </>
     )
 }
 
