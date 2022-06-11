@@ -2,7 +2,6 @@ import React from 'react'
 import ListItem from '../ListItem/ListItem'
 
 function List(props){
-
     return(
         <ul>
             {props.items.map(item => 
